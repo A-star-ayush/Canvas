@@ -4,7 +4,7 @@ window.onload = function() {
 		width = canvas.width = window.innerWidth,   
 		height = canvas.height = window.innerHeight;  // so that the canvas covers the entire window
 														// but do not do width = window.innerWidth = canvas.width..
-														
+	
 	// ct.fillRect(0, 0, widht, height);  // to fill the canvas with solid balck color
 
 	// Drawing random lines
@@ -96,6 +96,12 @@ ct.translate(width/2,height/2);  // bringing the origin to the center of the pag
 
 // Scaling	(can be used with circle to create ellipsoids etc, also with text, lines, etc)	
 ct.scale(0.8, 1.5); // shrink the x values by 0.8 and extend the y values by 1.5
+
+// To reset any transformations in place
+ct.setTransform(1, 0, 0, 1, 0, 0);
+
+// To save the current canvas state
+ct.save()  // To restore from it use: ct.restore()
 
 // ct.setLineDash([5, 3]); // To draw dashed line (- - - -) where dashes are 5px and spaces are 3px
 

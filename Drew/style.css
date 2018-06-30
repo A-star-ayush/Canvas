@@ -1,0 +1,145 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #E1E1E1;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+#canvas {
+	display: block;
+	width: 75%;
+	height: 100%;
+	margin: 0 auto;
+	background-color:  #F5F5F5;
+	cursor: crosshair;
+}
+
+#toolbox {
+	position: absolute;
+	display: block;
+	z-index: 2;
+	width: 6%;
+	height: 26%;
+	top: 9.5%;
+	right: 9.5%;
+	font-size: 0; /* to remove the whitespace between child inline or inline-block elements */
+}
+
+.tool {
+	display: inline-block;
+	width: 50%;
+	height: 21%;
+	background-color: #3A3C44;
+	border-color: #969696;
+	border-style: ridge;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;  /* duration for the hover effect to take place */
+	background-size: contain; /* to scale the image so that it's contained inside the element */
+	background-repeat: no-repeat; /* by default the background-image is repeated */
+}
+
+.tool:hover {
+	background-color: #BAB8B8;
+}
+
+#line {
+	background-image: url(img/line.png);
+}
+
+#rectangle {
+	background-image: url(img/rect.png);
+}
+
+#circle {
+	background-image: url(img/circle.png);
+}
+
+#curve {
+	background-image: url(img/curve.png);
+}
+
+#objectTool {
+	background-image: url(img/objectTool.png);
+}
+
+button::-moz-focus-inner {  /* To remove the dotted border after clicking the button */
+	border: none;
+}
+
+.toolFrame {
+	width: 100%;
+	height: 8%;
+	background-color: #000000;
+}
+
+.toolOption {
+	display: inline-block;
+	background-color: #FFFFFF;
+	width: 5%;
+	height: 80%;
+	border: none;
+	margin-right: 5%;
+	margin-bottom: 5%;
+}
+
+#toolOptions {
+	display: block;
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#objectBar {
+	display: none;
+	position: absolute;
+	width: 7%;
+	height: 92%;
+	top: 4%;
+	left: 1.5%;
+	z-index: 1;
+	overflow: auto;  /* to cause a scrollbar to appear when the element grows larger than the box */
+}
+
+.object {
+	display: block;
+	width: 100%;
+	height: 15%;
+	background-color: #F5F5F5;
+	border-color: #969696;
+	border-style: ridge;
+	font-weight: bold;
+}
+
+.toolTip {
+	width: 10%;
+	height: 2.5%;
+	font-weight: bold;
+	font-color: black;
+	text-align: center;
+	background-color: white;
+	padding-top: 0.2em;
+}
+
+#toolTip1 {
+	position: absolute;
+	bottom: 4%;
+	right: 1%;
+}
+
+#toolTip2 {
+	position: absolute;
+	bottom: 8%;
+	right: 1%;
+}

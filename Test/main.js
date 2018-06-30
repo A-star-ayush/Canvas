@@ -109,4 +109,5 @@ ct.save()  // To restore from it use: ct.restore()
 
 // ct.clearRect(0, 0, window.innerWidth, window.innerHeight);  // to clear the specified region of the canvas
 
+// ct.globalAlpha(0.5);  // Sets the level of transparency / opacity (should be followed by a fillStyle or beginPath, etc)
 */
